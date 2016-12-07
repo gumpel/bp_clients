@@ -45,53 +45,50 @@ $icon-font-path: '../fonts/';
                     bottom: -35%;
                     left: 50%;
                     margin-left: - 2.5em;
-                    transition: left 0.4s linear, bottom 0.4s linear;
+                    opacity: 0.1;
+                    transition: left 0.2s linear, bottom 0.2s linear,opacity 0.1s ease-in-out;
                 }
                 li:nth-child(1) {
                     bottom: -35%;
                     left: 2.5em;
                     margin-left: - 2.5em;
+                    opacity: 1;
                 }
                 li:nth-child(2) {
                     bottom: 15%;
                     left: 2.5em;
                     margin-left: - 2.5em;
+                    opacity: 1;
                 }
                 li:nth-child(3) {
                     bottom: 58%;
                     left: 20%;
                     margin-left: - 2.5em;
+                    opacity: 1;
                 }
                 li:nth-child(4) {
                     left: 50%;
                     margin-left: -2.5em;
                     bottom: calc(100% - 5em);
+                    opacity: 1;
                 }
                 li:nth-child(5) {
                     bottom: 58%;
                     left: 80%;
                     margin-left: - 2.5em;
+                    opacity: 1;
                 }
                 li:nth-child(6) {
                     left: calc(100% - 2.5em);
                     margin-left: -2.5em;
-                    bottom: 15%
+                    bottom: 15%;
+                    opacity: 1;
                 }
                 li:nth-child(7) {
                     left: calc(100% - 2.5em);
                     margin-left: -2.5em;
                     bottom: -35%
-                }
-                // li:last-child {
-                //     bottom: -35%;
-                //     left: 2.5em;
-                //     margin-left: - 2.5em;
-                // }
-                // li:nth-child(8) {
-                //     bottom: -35%;
-                //     left: 2.5em;
-                //     margin-left: - 2.5em;
-                // }
+                }             
                 li {
                     > div {
                         width: 5em;

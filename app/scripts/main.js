@@ -1,4 +1,4 @@
-
+$(document).ready(function(){
 var bpLeft = $('#bp_client_control_left:not(.stop)'),
     bpRight = $('#bp_client_control_right:not(.stop)'),
     bpClientObj = new Object(),
@@ -6,9 +6,7 @@ var bpLeft = $('#bp_client_control_left:not(.stop)'),
     bpClientNumber = $('#bp_client_list > ul > li').length,
     bpClient = $('#bp_client_list > ul > li'),
     bpIndex = 6;
-
-
-$('#bp_client_list > ul > li').each(function() {
+$(bpClient).each(function() {
     $(this).attr('data-index', $(this).index());
     bpHelpObj.title = $(this).find('.bp_client_title').text();
     bpHelpObj.link = $(this).find('.bp_client_link').text();
@@ -31,8 +29,12 @@ $('#bp_client_list > ul > li').each(function() {
             $(bpRight).removeClass('stop');
         }, 600);
         }, 5000)
-
     }
+})
+
+$(bpClient).on('click',function(e){
+	console.log($(this).index());
+	e.preventDefault();
 
 })
 
@@ -61,8 +63,7 @@ $(bpLeft).on('click', function(e) {
     }
 });
 
-function printClient(index) {
-    console.log(index);
+function printClient(index) {   
     $('#bp_client_nr').html( bpClientNumber - parseInt(index));
     $('#bp_client_of').html('/0' + bpClientNumber);
     $('#bp_client_title').html(bpClientObj[index].title);
@@ -71,3 +72,4 @@ function printClient(index) {
     $('#bp_client_coment').html(bpClientObj[index].coment);
     $('#bp_client_logo img').attr('src', bpClientObj[index].logoSrc);
 }
+});
