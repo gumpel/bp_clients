@@ -9,6 +9,9 @@ $icon-font-path: '../fonts/';
     width: 100%;
     background: #ceceef;
     font-size: 20px;
+    @media (max-width: $screen-sm-min) {
+        font-size: 3.4vmin;
+    }
     .bp_client_circle {
         width: 25em;
         height: 25em;
@@ -34,10 +37,8 @@ $icon-font-path: '../fonts/';
                 $elements: 9;
                 // @for $i from 0 to $elements {
                 //     li:nth-child(#{$i}) {
-                        
                 //         //left: ($i)*15%;
                 //     }
-
                 // }
                 li {
                     position: absolute;
@@ -101,7 +102,7 @@ $icon-font-path: '../fonts/';
                         .bp_client_coment {
                             display: none;
                         }
-                        div.bp_client_logo {                            
+                        div.bp_client_logo {
                             border-radius: 50%;
                             width: 5em;
                             height: 5em;
@@ -118,6 +119,7 @@ $icon-font-path: '../fonts/';
                                 vertical-align: middle;
                                 max-height: 70%;
                                 opacity: 0.5;
+                                max-width: 96%;
                             }
                         }
                     }
@@ -134,6 +136,9 @@ $icon-font-path: '../fonts/';
             text-align: center;
             top: 0.4em;
             width: 100%;
+            @media (max-width: $screen-sm-min) {
+                display: none;
+            }
             .bp_client_nr {
                 font-family: 'bebas_neuebold';
                 font-weight: 700;
@@ -143,6 +148,7 @@ $icon-font-path: '../fonts/';
                 line-height: 3.3em;
                 font-size: 0.26em;
                 vertical-align: top;
+                margin-left: 3px;
             }
         }
         .bp_client_circle_inner {
@@ -162,6 +168,10 @@ $icon-font-path: '../fonts/';
                 margin-top: 1.2em;
                 letter-spacing: 0.03em;
                 color: #101112;
+                @media (max-width: $screen-sm-min) {
+                    margin-top: -2.6em;
+                    font-size: 1.6em;
+                }
             }
             a.bp_client_link {
                 position: absolute;
@@ -171,6 +181,10 @@ $icon-font-path: '../fonts/';
                 color: #2c57da;
                 font-size: 0.8em;
                 margin-top: 3.7em;
+                @media (max-width: $screen-sm-min) {
+                    margin-top: -2em;
+                    font-size: 1.2em;
+                }
             }
             div.bp_client_coment {
                 font-family: "bebas_neue_regularregular", sans-serif;
@@ -182,8 +196,14 @@ $icon-font-path: '../fonts/';
                 @media (min-width: $screen-sm-min) {
                     margin: 25rem -40% 0;
                 }
+                @media (max-width: $screen-sm-min) {
+                    margin-top: 11em;
+                    font-size:1.4em;
+                }
+
                 @media (min-width: $screen-md-min) {
                     margin: 25rem -100% 0;
+                    width: 895px;
                 }
                 @media (min-width: $screen-lg-min) {
                     margin: 25rem -100% 0;
@@ -197,6 +217,12 @@ $icon-font-path: '../fonts/';
                 margin: 4.5em auto;
                 text-align: center;
                 white-space: nowrap;
+                @media (max-width: $screen-sm-min) {
+                     width: 12em;
+                height: 12em;
+                margin: 1.5em auto;
+
+                }
                 &:before {
                     content: "";
                     display: inline-block;
@@ -206,6 +232,7 @@ $icon-font-path: '../fonts/';
                 img {
                     vertical-align: middle;
                     max-height: 70%;
+                    max-width: 90%;
                 }
             }
         }
@@ -215,12 +242,12 @@ $icon-font-path: '../fonts/';
 .bp_client_control_button {
     z-index: 3;
     position: absolute;
-    width: 58px;
-    height: 58px;
+    width: 52px;
+    height: 52px;
     border: 2px solid #fff;
     border-radius: 50%;
     text-align: center;
-    line-height: 58px;
+    line-height: 45px;
     color: #fff;
     font-size: 40px;
     display: block;
@@ -229,10 +256,27 @@ $icon-font-path: '../fonts/';
     top: 50%;
     &.bp_client_control_left {
         left: -100px;
+        @media (max-width: $screen-sm) {
+            left: 0.25em;
+            margin-top: -0.5em
+        }
     }
     &.bp_client_control_right {
         right: -100px;
         padding-left: 5px;
+        @media (max-width: $screen-sm) {
+            right: 0.25em;
+            margin-top: -0.5em
+        }
+    }
+    @media (max-width: $screen-sm) {
+        width: 1em;
+        height: 1em;
+        line-height: 0.7em;
+        font-weight: 300;
+        i {
+            font-size: 0.7em;
+        }
     }
     &:hover {
         color: #cdcdef;
